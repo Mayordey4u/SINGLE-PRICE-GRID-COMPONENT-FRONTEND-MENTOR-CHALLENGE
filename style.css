@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+:root{
+
+--Cyan: hsl(179, 62%, 43%);
+--BrightYellow: hsl(71, 73%, 54%);
+--LightGray: hsl(204, 43%, 93%);
+--GrayishBlue: hsl(218, 22%, 67%);
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Karla', sans-serif;
+    background-color:var(--LightGray);
+    min-height: 100vh;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.container{
+    max-width: 950px; 
+    margin: 0 auto;
+}
+
+.wrapper{
+    background-color: white;
+    border-radius: 7px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "a a""b c";
+    overflow: hidden;
+    margin: 2rem 1rem;
+}
+
+.box{
+    padding: 30px;
+}
+.top{
+    grid-area: a;
+    background-color:white;
+}
+
+.top h1{
+    color: var(--Cyan);
+    font-size:23px;
+    margin-bottom: 15px;
+}
+
+.top h3{
+    color: var(--BrightYellow);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.top p{
+    color: var(--GrayishBlue);
+    font-size: 14px;
+    margin-bottom: 7px;
+
+}
+.left{
+    grid-area: b;
+    background-color: var(--Cyan);
+    color: white;
+}
+
+.left h2{
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.price{
+    font-size: 24px;  
+    font-weight: bold;  
+
+}
+h5{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 10px;
+}
+
+.left p{
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    background-color: var(--BrightYellow);
+    width: 100%;
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+.right{
+    grid-area: c;
+    background-color: hsl(179, 62%, 60%);
+    color: white;
+}
+
+.right h2{
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+@media only screen and (max-width:425px){
+    .wrapper{
+        grid-template-columns: 100%;
+        grid-template-areas: "a""b""c";
+    }
+    .box{
+        padding:20px;
+    }
+}
